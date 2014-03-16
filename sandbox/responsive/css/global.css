@@ -559,7 +559,8 @@ html {
 .container {
   margin: 0 auto;
   max-width: 48rem;
-  width: 90%; }
+  width: -webkit-calc(100% - 0.5rem);
+  width: calc(100% - 0.5rem); }
 
 /*
    Columns
@@ -570,9 +571,7 @@ html {
 
 @media (min-width: 40rem) {
   .column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem; }
+    float: left; }
 
   .column.full {
     width: 100%; }
@@ -611,6 +610,12 @@ html {
 html {
   border-top: 0.5rem solid #22a8b5; }
 
+header {
+  padding: 15rem 0; }
+
+section#responsive {
+  padding: 5rem 0; }
+
 #web-browser {
   height: 15rem;
   width: 15rem;
@@ -648,20 +653,26 @@ html {
     width: 100%;
     height: 4rem;
     padding: 1.7rem 0 0 3.25rem; }
+    #web-browser .browser-background .activated {
+      opacity: 1 !important;
+      -webkit-transition: all 1s ease-in;
+      transition: all 1s ease-in; }
     #web-browser .browser-background .browser-h1 {
       background: #ececec;
       width: 3rem;
       height: 0.5rem;
       border-radius: 0.1rem;
       float: left;
-      margin-right: 0.25rem; }
+      margin-right: 0.25rem;
+      opacity: 0; }
     #web-browser .browser-background .browser-h2 {
       background: #ececec;
       width: 2rem;
       height: 0.5rem;
       border-radius: 0.1rem;
       float: left;
-      margin-right: 0.25rem; }
+      margin-right: 0.25rem;
+      opacity: 0; }
 
 #iphone {
   width: 5rem;
@@ -669,8 +680,8 @@ html {
   background: #555;
   border-radius: 0.4rem;
   position: absolute;
-  margin-top: -9rem;
-  margin-left: 12.5rem; }
+  margin-left: 12.5rem;
+  margin-top: -9rem; }
   #iphone #iphone-camera {
     height: 0.3rem;
     width: 0.3rem;
@@ -695,23 +706,65 @@ html {
       width: 100%;
       height: 3.5rem;
       padding: 0.8rem 0 0 0; }
+      #iphone #iphone-screen .iphone-background .activated {
+        opacity: 1 !important;
+        -webkit-transition: all 1s ease-in;
+        transition: all 1s ease-in; }
       #iphone #iphone-screen .iphone-background .iphone-h1 {
         width: 2.5rem;
         height: 0.4rem;
         background: #ececec;
         border-radius: 0.1rem;
         margin: 0 auto;
-        margin-bottom: 0.25rem; }
+        margin-bottom: 0.25rem;
+        opacity: 0; }
       #iphone #iphone-screen .iphone-background .iphone-h2 {
         width: 1.5rem;
         height: 0.4rem;
         background: #ececec;
         border-radius: 0.1rem;
         margin: 0 auto;
-        margin-bottom: 0.25rem; }
+        margin-bottom: 0.25rem;
+        opacity: 0; }
+  #iphone .iphone-container {
+    width: 100%;
+    padding: 0.5rem; }
+    #iphone .iphone-container .iphone-p1 {
+      width: 1.3rem;
+      height: 0.4rem;
+      border-radius: 0.1rem;
+      background: #555555;
+      float: left;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem; }
+    #iphone .iphone-container .iphone-p2 {
+      width: 1.9rem;
+      height: 0.4rem;
+      border-radius: 0.1rem;
+      background: #555555;
+      float: left;
+      margin-bottom: 0.25rem; }
+    #iphone .iphone-container .iphone-p3 {
+      width: 1.9rem;
+      height: 0.4rem;
+      border-radius: 0.1rem;
+      background: #555555;
+      float: left;
+      margin-bottom: 0.25rem;
+      margin-right: 0.25rem; }
+    #iphone .iphone-container .iphone-p4 {
+      width: 1.3rem;
+      height: 0.4rem;
+      border-radius: 0.1rem;
+      background: #555555;
+      float: left;
+      margin-bottom: 0.25rem; }
   #iphone #iphone-home {
     height: 0.9rem;
     width: 0.9rem;
     border-radius: 50%;
     background: #777;
     margin: 0.25rem auto 0 auto; }
+
+section#clean {
+  padding: 5rem 0; }
